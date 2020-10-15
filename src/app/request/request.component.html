@@ -1,0 +1,52 @@
+
+
+<div class="container">
+  <h3>Travel Request</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="origination">Origination Airport</label>
+      <input type="text" class="form-control" id="origination" placeholder="City or airport" [(ngModel)]="origin" name="origin">
+    </div>
+    <div class="col-md-6">
+      <label for="destination">Destination Airport</label>
+      <input type="text" class="form-control" id="destination" placeholder="City or airport" [(ngModel)]="dest" name="dest">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="passengers">Number of passengers</label>
+      <input type="text" class="form-control" id="passengers" placeholder="" [(ngModel)]="passengers" name="passengers">
+    </div>
+
+    <div class="col-md-6">
+      <label for="date">Travel Date</label>
+      <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy" [(ngModel)]="date" name="date">
+  </div>
+
+  <div class="col-md-6">
+    <button type="button" class="form-control btn btn-primary btn-lg btn-block"  (click)="calculate()">Submit</button>
+  </div>
+
+  <div class="col-md-6">
+    <button type="submit" class="form-control btn btn-primary btn-lg btn-block" (click)="clear()">Clear</button>
+  </div>
+
+  <div class="row display-div" *ngIf="isShow">
+    <div>
+      <hr/>
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">Origination Airport: {{origin}}</li>
+        <li class="list-group-item">Destination Airport: {{dest}}</li>
+        <li class="list-group-item">Number of passengers: {{passengers}}</li>
+        <li class="list-group-item">Travel Date: {{date | date | uppercase}} </li>
+      </ul>
+
+      <h3>Total cost: {{total}}</h3>
+  </div>
+
+</div>
+
+
+
+
