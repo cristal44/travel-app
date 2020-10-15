@@ -13,7 +13,7 @@ import { RequestComponent } from './request/request.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

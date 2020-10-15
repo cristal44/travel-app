@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-request',
@@ -25,15 +26,12 @@ export class RequestComponent implements OnInit {
     this.isShow = true;
   }
 
-  clear(): void {
+  reset(): void {
     this.origin = '';
     this.dest = '';
     this.passengers = 0;
     this.date = '';
-    this.total = 0;
+    this.total = null;
     this.isShow = false;
-
   }
-
-
 }
